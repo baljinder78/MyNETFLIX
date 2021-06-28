@@ -1,0 +1,1 @@
+export {default as AZlogo} from "./AtoZ.png";
