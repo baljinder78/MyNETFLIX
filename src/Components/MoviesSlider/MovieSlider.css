@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+body{
+        background-color: #0e34a0;
+        font-family: 'Righteous', cursive;
+        color: #141414;
+}
+.movie_Slider{
+    height: 2%;
+
+}
+
+.movie_Slider img {
+    height: 10%;
+    width: 100%;
+    border-radius: 5%;
+}
+
+.movie_slider_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5% 5%;
+}
+.movie_slider_allmovies {
+    display: flex;
+    overflow: hidden;
+}
+
+.movie_slider_card {
+    /* height: 10%; */
+    margin: 3% 10%;
+    /* width: 20%; */
+}
+.movie_slider_movie_title{
+    margin-top: 5%;
+        word-wrap: break-word;
+    }
+.movieslider_showall:hover{
+    text-shadow: 1px 2px 5px #dfdfdf;
+    /* color: #080707; */
+}
+
+@media all and (max-width:500px)
+{
+    .MuiRating-decimal{
+        font-size: x-small;
+    }
+    .movie_slider_movie_date
+    {
+        font-size: x-small;
+    }
+
+    .movie_slider_movie_title{
+        font-size: small;
+        word-wrap: break-word;
+    }
+}

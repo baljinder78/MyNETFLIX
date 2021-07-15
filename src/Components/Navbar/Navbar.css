@@ -6,7 +6,7 @@
     align-items: center;
     flex-direction: row;
     justify-content: space-around;
-    background-color: #141414;
+    background-color: #1F1F1F;
     color: #DFDFDF;
     padding: 1%;
 }
@@ -16,6 +16,7 @@
     flex-direction: row;
     justify-content: space-evenly;
     list-style-type: none;
+    margin: 1%;
 }
 
 .navbar_links a:hover {
@@ -43,6 +44,7 @@
     padding: 8%;
     text-align: center;
     transform:translateX(-500px) ;
+    z-index: 1000;
 }
     .navbar_logo {
     width: 30%;
