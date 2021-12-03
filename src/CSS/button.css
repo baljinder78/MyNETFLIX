@@ -1,0 +1,27 @@
+.button_text {
+    margin: 0;
+}
+
+.button_ {
+    background-color: var(--red);
+    border-radius: 2px;
+    width: 5em;
+    font-size: 1.2rem;
+    height: 2rem;
+    text-align: center;
+    border: none;
+    color: var(--text_nav)
+}
+
+.button_:hover {
+    background-color: var(--hv_red);
+}
+
+.btn_getstarted {
+    height: 2em;
+    width: 9em;
+    /* margin: auto; */
+    margin: 0 40%;
+    font-size: 2em;
+    padding: 1% 2%;
+}

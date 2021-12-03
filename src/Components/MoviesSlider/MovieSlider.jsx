@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+import { useNavigate } from 'react-router-dom';
+
 //api function
 import {Moviedata} from "../../api";
 
@@ -22,13 +24,15 @@ import 'swiper/components/scrollbar/scrollbar.scss';
 //css
 import './MovieSlider.css';
 
-import testposter from '../../Images/testposter.jpg';
 
 //swiper use
 SwiperCore.use([Navigation, Pagination, Scrollbar]);
 
 //main component
 const MovieSlider = ({type}) => {
+
+  let history=useNavigate();
+
   //movies array
   const [movies, setmovies] = useState({});
   let arr=[];
@@ -38,6 +42,12 @@ const MovieSlider = ({type}) => {
     }
     fetchdata();
   },[]);
+
+  const handleAllinfo=(id)=>
+  {
+    history( `/allinfo/${id}`);
+    console.log(id)
+  }
 
   return (
     <div className='movie_Slider'>
@@ -49,8 +59,9 @@ const MovieSlider = ({type}) => {
         {movies.results != undefined ? (
           <Swiper slidesPerView={5} navigation>
             {movies.results.map((movie, i) => (
-              <SwiperSlide key={i}>
-                <div className='movie_slider_card'>
+             
+             <SwiperSlide key={i}>
+                <div className='movie_slider_card' onClick={()=>handleAllinfo(movie.id)}>
                   {movie.adult ? (
                     <Badge badgeContent={'+18'} color='error'>
                       <img
@@ -65,7 +76,7 @@ const MovieSlider = ({type}) => {
                     />
                   )}
 
-                  <div className='movie_slider_card_moviedet'>
+                  {/* <div className='movie_slider_card_moviedet'>
                     <h2 className='movie_slider_movie_title'>
                       {movie.original_title}
                     </h2>
@@ -73,9 +84,10 @@ const MovieSlider = ({type}) => {
                       {movie.release_date}
                     </p>
                     <Ratingcompo rating={movie.vote_average} />
-                  </div>
+                  </div> */}
                 </div>
               </SwiperSlide>
+              
             ))}
           </Swiper>
         ) : (

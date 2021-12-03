@@ -1,0 +1,34 @@
+.welcome_head {
+    /* background-image: url("../images/welcomebg.jpg"); */
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    position: absolute;
+}
+
+.offer {
+    height: 500px;
+}
+
+.w_upperbar {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    margin: auto;
+}
+
+.w_text {
+    font-size: 5em;
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    margin-top: 10%;
+    margin-bottom: 4%;
+}
+
+.w_img {
+    width: 10%;
+    margin: 2% 0;
+}

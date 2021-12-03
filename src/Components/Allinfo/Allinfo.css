@@ -1,24 +1,21 @@
 .background_poster {
     width: 100%;
-    margin-top: -15%;
-    border-radius: 50px;
 }
 
 .background_posture {
     width: 100%;
-    padding: 5%;
-}
-
-.movie_content {
-    margin-left: 10%;
-    display: flex;
-    transform: translateY(-100%);
-}
-
-.movie_content img {
-    border-radius: 20px;
 }
 
 .movie_info {
     margin-left: 10%;
+}
+
+.movie_content {
+    width: 50%;
+    display: flex;
+    background-color: rgba(229, 9, 20, 0.8);
+    ;
+    transform: translateY(-64%);
+    margin: auto;
+    justify-content: space-between;
 }

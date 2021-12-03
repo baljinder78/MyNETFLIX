@@ -1,7 +1,12 @@
-import React from "react";
+import React,{useEffect} from "react";
+import { useParams } from "react-router";
 import "./Allinfo.css";
-const Aboutvideo=()=>
+const AboutMovie=()=>
 {
+  let {id}=useParams()
+  useEffect(() => {
+    console.log(id)
+  }, [])
     return (
       <>
     <div className="background_posture">
@@ -18,4 +23,4 @@ const Aboutvideo=()=>
     );
 }
 
-export default Aboutvideo;
+export default AboutMovie;

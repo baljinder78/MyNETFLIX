@@ -1,0 +1,32 @@
+.signin_area {
+    font-size: x-large;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 5%;
+    border: 2px solid whitesmoke;
+    padding: 5%;
+}
+
+.inp {
+    margin: 6% 0;
+    font-size: x-large;
+    background: transparent;
+    border: none;
+    border-bottom: 4px solid grey;
+    color: var(--red);
+}
+
+.not_member {
+    font-size: large;
+}
+
+.box_title,
+.no_mem {
+    color: var(--red);
+}
+
+.s_btn {
+    margin: auto;
+}

@@ -1,1 +1,1 @@
-export {default as AZlogo} from "./AtoZ.png";
+export {default as logo} from "./logo.png";

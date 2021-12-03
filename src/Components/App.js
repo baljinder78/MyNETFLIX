@@ -10,6 +10,12 @@ return (
     <MovieSlider type={'now_playing'} />
     <MovieSlider type={'top_rated'} />
     <MovieSlider type={'popular'} />
+
+
+
+
+
+
   </>
 );
 } 
