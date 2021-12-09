@@ -1,12 +1,38 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Link,useNavigate } from 'react-router-dom';
-
+import {login} from "../../api/index"
 function Sigin({handleLogin}) {
+   const email = useRef({});
+   const password = useRef({});
   let history=useNavigate();
   const handleSubmit=()=>
   {
-    history('/home');
-    handleLogin();
+
+    if (
+      !email.current.value ||
+      !password.current.value
+    ) {
+      alert('all field are mandatory');
+    } else {
+      const formdata = {
+        email: email.current.value,
+        password: password.current.value,
+      };
+
+      const siginuser = async () => {
+        const { data } = await login({ formdata });
+        console.log(data)
+        if (data === 'False') {
+          alert('something went wrong');
+        } else {
+          localStorage.setItem('token', data);
+          history('/home');
+          handleLogin();
+        }
+      };
+
+      siginuser();
+    }
   }
 
 
@@ -14,9 +40,9 @@ function Sigin({handleLogin}) {
     <div className='signin_area'>
       <h1 className='box_title'>Sign in</h1>
       <label className='inp_lable'>Email</label>
-      <input type='email' placeholder='Enter your email' className='inp' />
+      <input type='email' placeholder='Enter your email' className='inp' ref={email}/>
       <label className='inp_lable'>Password</label>
-      <input type='password' placeholder='Enter password' className='inp' />
+      <input type='password' placeholder='Enter password' className='inp' ref={password}/>
       <button className='button_ s_btn' onClick={handleSubmit}>Sign in</button>
       <p className='not_member'>
         {' '}

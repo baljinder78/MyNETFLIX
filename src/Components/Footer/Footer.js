@@ -40,7 +40,7 @@ function Footer() {
             src='https://img.icons8.com/fluency/48/000000/github.png'
             alt='git'
           />
-          <p>This is just made for to show case the skill in front end designing --By Baljinder Singh</p>
+          {/* <p>This is just made for to show case the skill in front end designing --By Baljinder Singh</p> */}
         </div>
       </div>
     );
